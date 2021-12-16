@@ -1,0 +1,66 @@
+$$ displays a list of all registered process creation callbacks
+$$ $$><C:\Users\rui\Desktop\windbg-scripts\psnotifycallbacks.wdb
+
+
+r $t0 = dwo(nt!PspCreateProcessNotifyRoutineExCount)
+r $t1 = dwo(nt!PspCreateProcessNotifyRoutineCount)
+r $t3 = nt!PspCreateProcessNotifyRoutine
+
+aS ${Total} (@$t0 + @$t1)
+
+.block
+{  
+  .printf "[+] Total of: %u CreateProcessNotifyRoutines\n", ${Total}
+
+  .for (r $t4 = 0 ; $t4 < ${Total} ; r $t4 = @$t4 + 1)
+  {
+    r $t5 = poi(@$t3 + (@$ptrsize * @$t4))
+    r $t5 = @@C++(@$t5 & (~0xf))
+    r $t6 = (@$t5 + @$ptrsize)
+    .printf "[%u] %y\n", @$t4, poi(@$t6)
+  }
+}
+
+ad /q _sr_${Total};
+
+r $t0 = dwo(nt!PspCreateThreadNotifyRoutineCount)
+r $t1 = nt!PspCreateThreadNotifyRoutine
+
+aS ${Total} @$t0
+
+.block
+{
+  .printf "\n[+] Total of: %u CreateThreadNotifyRoutines\n", ${Total}
+
+  .for (r $t4 = 0 ; $t4 < ${Total} ; r $t4 = @$t4 + 1)
+  {
+    r $t5 = poi(@$t1 + (@$ptrsize * @$t4))
+    r $t5 = @@C++(@$t5 & (~0xf))
+    r $t6 = (@$t5 + @$ptrsize)
+    .printf "[%u] %y\n", @$t4, poi(@$t6)
+  }
+}
+
+ad /q _sr_${Total};
+
+r $t0 = dwo(nt!PspLoadImageNotifyRoutineCount)
+r $t1 = nt!PspLoadImageNotifyRoutine
+
+aS ${Total} (@$t0)
+
+.block
+{
+
+  .printf "\n[+] Total of: %u CreateLoadImageRoutines\n", ${Total}
+
+  .for (r $t4 = 0 ; $t4 < ${Total} ; r $t4 = @$t4 + 1)
+  {
+    r $t5 = poi(@$t1 + (@$ptrsize * @$t4))
+    r $t5 = @@C++(@$t5 & (~0xf))
+    r $t6 = (@$t5 + @$ptrsize)
+    .printf "[%u] %y\n", @$t4, poi(@$t6)
+  }
+}
+
+ad /q _sr_${Total};
+ad /q *;
