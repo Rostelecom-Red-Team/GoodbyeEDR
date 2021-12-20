@@ -12,7 +12,7 @@ Disable & hook notifications of AV & EDR from events occurring in the system.
 
 The project has the following features:
 1. List 
-    - callbacks;
+    - callbacks,
     - minifilters.
 3. Removing callback functions:
     - create/exit of processes,
