@@ -15,10 +15,10 @@ The project has the following features:
     - callbacks;
     - minifilters.
 3. Removing callback functions:
-    - create/exit of processes;
+    - create/exit of processes,
     - create/exit of threads.
 4. Hook callback functions with filtering by process name:
-    - create/exit of processes;
+    - create/exit of processes,
     - create/exit of threads.
 5. Hook file system minifilters.
 6. Abuse AV & EDR after remove or hook.
