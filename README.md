@@ -48,7 +48,9 @@ Stop driver: `sc start dobro`
 ## Usage
 
 For control driver run DorbroCli.exe in cmd.exe
-```Usage: DobroCli.exe <options>
+
+```
+Usage: DobroCli.exe <options>
 Options:
   -h                        Show this message.
   -l                        Process & Thread Notify Callbacks Address's & FS Minifilters List.
@@ -74,9 +76,10 @@ Options:
   -chk                      Try AV/EDR for fun ;-) (Inject PS, need admin).
 <Driver Debug>
   -dbg_lm                   List modules in Driver DbgPrint.
-  -dbg_bsod                 BS0D.```
+  -dbg_bsod                 BS0D.
+```
 
-##Links
+## Links
 Articles covering these issues in detail:
 1. http://deniable.org/windows/windows-callbacks ---> https://web.archive.org/web/20200326040826/http://deniable.org/windows/windows-callbacks
 2. https://synzack.github.io/Blinding-EDR-On-Windows/
