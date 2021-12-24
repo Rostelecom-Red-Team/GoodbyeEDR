@@ -41,13 +41,17 @@ After built put all files together in one directory and place the same directory
 
 Run install.bat as administrator.
 
-Start driver: `sc start dobro`
+Start driver:
 
-Stop driver: `sc start dobro`
+`sc start dobro`
+
+Stop driver:
+
+`sc start dobro`
 
 ## Usage
 
-For control driver run DorbroCli.exe in cmd.exe
+For control driver run DorbroCli.exe in cmd.exe:
 
 ```
 Usage: DobroCli.exe <options>
@@ -93,8 +97,12 @@ Hook file system minifilters, no problem:
 
 `DobroCli.exe -hm 1 kxxxxxx`
 
+****
+![alt text](https://github.com/Rostelecom-Red-Team/GoodbyeEDR/blob/main/Screenshots/All_In_One.jpg?raw=true)
+****
+
 ## Links
 Articles covering these issues in detail:
-1. http://deniable.org/windows/windows-callbacks ---> https://web.archive.org/web/20200326040826/http://deniable.org/windows/windows-callbacks
-2. https://synzack.github.io/Blinding-EDR-On-Windows/
+1. https://synzack.github.io/Blinding-EDR-On-Windows/
+2. http://deniable.org/windows/windows-callbacks ---> https://web.archive.org/web/20200326040826/http://deniable.org/windows/windows-callbacks
 3. https://aviadshamriz.medium.com/part-1-fs-minifilter-hooking-7e743b042a9d     
