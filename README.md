@@ -103,6 +103,7 @@ Hook file system minifilters, no problem:
 
 ## Links
 Articles covering these issues in detail:
-1. https://synzack.github.io/Blinding-EDR-On-Windows/
-2. http://deniable.org/windows/windows-callbacks ---> https://web.archive.org/web/20200326040826/http://deniable.org/windows/windows-callbacks
-3. https://aviadshamriz.medium.com/part-1-fs-minifilter-hooking-7e743b042a9d     
+1. https://habr.com/ru/company/rostelecom/blog/597619/ [RU]
+2. https://synzack.github.io/Blinding-EDR-On-Windows/
+3. http://deniable.org/windows/windows-callbacks ---> https://web.archive.org/web/20200326040826/http://deniable.org/windows/windows-callbacks
+4. https://aviadshamriz.medium.com/part-1-fs-minifilter-hooking-7e743b042a9d     
