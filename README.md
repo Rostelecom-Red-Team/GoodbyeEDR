@@ -79,6 +79,22 @@ Options:
   -dbg_bsod                 BS0D.
 ```
 
+Get list callbacks process and thread notify routine + file system minifilters:
+
+`DobroCli.exe -l`
+
+Hook thread and process callback notify routine with filter by name process, no problem:
+
+`DobroCli.exe -hthr 1 kxxx`
+
+`DobroCli.exe -hps 7 kxxx`
+
+Hook file system minifilters, no problem:
+
+`DobroCli.exe -hm 1 kxxxxxx`
+
+
+
 ## Links
 Articles covering these issues in detail:
 1. http://deniable.org/windows/windows-callbacks ---> https://web.archive.org/web/20200326040826/http://deniable.org/windows/windows-callbacks
