@@ -93,8 +93,6 @@ Hook file system minifilters, no problem:
 
 `DobroCli.exe -hm 1 kxxxxxx`
 
-
-
 ## Links
 Articles covering these issues in detail:
 1. http://deniable.org/windows/windows-callbacks ---> https://web.archive.org/web/20200326040826/http://deniable.org/windows/windows-callbacks
